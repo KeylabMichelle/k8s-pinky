@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pinkyapp-deployment
+  labels:
+    app: pinkyapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pinkyapp
+  template:
+    metadata:
+      labels:
+        app: pinkyapp
+    spec:
+      containers:
+      - name: pinkyapp
+        image: keylab/webapp-conffetti:v0.0.1
+        ports:
+        - containerPort: 80
