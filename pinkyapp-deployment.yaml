@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: pinkyapp
-        image: keylab/webapp-conffetti:v0.0.1
+        image: keylab/webapp-conffetti:main
         ports:
         - containerPort: 80
